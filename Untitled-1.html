@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&family=Noto+Sans+KR:wght@100..900&display=swap"
+        rel="stylesheet"> <!-- 글꼴 불러오기-->
+    <title>CSSJBR</title>
+    <style>
+        * {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .title {
+            font-family: "Dancing Script", serif;
+            margin-top: 200px;
+            height: 200px;
+            margin: 0 auto;
+
+            font-size: 60px;
+            text-align: center;
+            color: #ff3d00;
+            line-height: 180px;
+        }
+
+        .title>img {
+            width: 70px;
+            float: left;
+            margin-top: 60px;
+            margin-left: 100px;
+        }
+
+        .six {
+            margin: 30px;
+        }
+
+        .black {
+            background-color: rgb(59, 59, 59);
+
+            height: 3px;
+            margin: 0 auto;
+            margin-bottom: 70px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .menu {
+            background-color: white;
+            box-shadow: 0px 0px 3px 0px black;
+            width: 350px;
+            height: 350px;
+            font-size: 25px;
+            float: left;
+            margin-left: 50px;
+            margin-top: 20px;
+            line-height: 70px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .home {
+            width: 35px;
+        }
+
+        .labtop {
+            width: 30px;
+        }
+
+        .book {
+            width: 30px;
+        }
+
+        .ping {
+            width: 30px;
+        }
+
+        .subtitle {
+            margin-top: 600px;
+            border: 3px solid #ff3d00;
+            border-radius: 40px;
+            margin: 0 auto;
+            width: 500px;
+            height: 100px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 15px;
+        }
+
+        .information {
+            width: 1280px;
+            height: 1000px;
+            margin-left: 450px;
+            margin-right: 50px;
+        }
+
+        .information>p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .introduce {
+            display: flex;
+        }
+
+        .cssjbr {
+            width: 400px;
+            height: 500px;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+
+        .cssjbr>p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .cssjbrbox {
+            border: 3px solid #ff3d00;
+            border-radius: 40px;
+            height: 400px;
+            text-align: center;
+        }
+
+        .emoji {
+            display: inline-block;
+            width: 400px;
+            height: 500px;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+
+        .emoji>p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .emojibox {
+            border: 3px solid #ff3d00;
+            border-radius: 40px;
+            height: 400px;
+            text-align: center;
+        }
+
+        .object {
+            display: inline-block;
+            width: 400px;
+            height: 500px;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+
+        .object>p {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .objectbox {
+            border: 3px solid #ff3d00;
+            border-radius: 40px;
+            height: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <img
+            src="data:image/png;base64,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">
+        <!--캐치테이블 로고-->
+        <b class="six">CSSJBR</b><!--조 이름-->
+    </div>
+    <div class="black"><!--구분선-->
+    </div>
+    <div>
+        <div>
+            <nav class="menu"><!--사이드 네비게이터-->
+                <ul>
+                    <li><img class="home" src="home.png"><a href="#" title="팀 소개">&nbsp;팀 소개</a></li>
+                    <li><img class="labtop" src="labtop.png"><a href="#" title="멤버 소개"> &nbsp;멤버 소개</a></li>
+                    <li><img class="book" src="book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
+                    <li><img class="ping" src="ping.png"><a href="#" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="information"><!--정보 들어갈 공간-->
+
+            <div class="subtitle"><!--네비게이터 항목(멤버소개, 방명록 등으로 바뀌어야 함)-->
+                <p>멤버 소개</p>
+            </div>
+            <p>우리 팀과 팀원들을 소개하는 장소</p>
+
+            <div class="introduce"><!--박스 전체-->
+                <div class="cssjbr"><!--박스 1-->
+                    <p>
+                        김민성 팀장
+                    </p>
+                    <div class="cssjbrbox">
+                        <pre>
+
+                            1. 객관적으로 살펴본 자신의 장점
+
+                            2. [팀]과 [자신]에 대한 설명 및 MBTI
+                           
+                            3. 자신의 스타일 협업 스타일 소개
+                           
+                            4. 우리 팀만의 특징과 추구하는 궁극적인 목표
+                           
+                            5. 우리 팀의 약속
+                           
+                           6.  팀원들의 블로그 주소
+                    </pre><!--pre는 띄어쓰기, 문단 등을 적용시켜주는 태그이기 때문에 줄맞춤이 안됩니다!-->
+                    </div>
+                </div>
+                <div class="emoji"><!--박스 2-->
+                    <p>
+                        이준성 팀원
+                    </p>
+                    <div class="emojibox">
+
+                    </div>
+                </div>
+                <div class="object"><!--박스 3-->
+                    <p>
+                        김용우 팀원
+                    </p>
+                    <div class="objectbox">
+
+                    </div>
+                </div>
+                <div class="object"><!--박스 4-->
+                    <p>
+                        김지웅 팀원
+                    </p>
+                    <div class="objectbox">
+
+                    </div>
+                </div>
+                <div class="object"><!--박스 5-->
+                    <p>
+                        김동환 팀원
+                    </p>
+                    <div class="objectbox">
+
+                    </div>
+                </div>
+                <div class="object"><!--박스 6-->
+                    <p>
+                        김동진 팀원
+                    </p>
+                    <div class="objectbox">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
