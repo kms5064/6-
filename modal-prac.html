@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .click-modal {
+            display: inline-block;
+            background-color: salmon;
+            margin: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #modal {
+            display: none;
+            background-color: yellowgreen;
+            width: 400px;
+            height: 600px;
+            overflow-y: auto;
+            margin: auto;
+            padding: 0 15px 0 15px;
+            position: relative;
+        }
+
+        #modal #modal-content {
+            text-align: center;
+            padding: 80px;
+            width: 100%;
+        }
+
+        #modal #modal-close {
+            float:right;
+            font-size: 50px;
+            padding-right: 10px;
+            display: inline;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #modal img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",() => {
+            const modal = document.getElementById("modal");
+            const modalContent = document.getElementById('modal-content')
+
+            function modalOn(content) {
+                modalContent.innerHTML = content;
+                modal.style.display = "flex";
+            }
+
+            function modalOff() {
+                modal.style.display = "none";
+            }
+
+            const clickModal = document.querySelectorAll(".click-modal");
+            clickModal.forEach(clic =>{
+                clic.addEventListener("click", () => {
+                    const content = clic.getAttribute("data-content");
+                    modalOn(content);
+                })
+            })
+            
+            const closeModal = document.getElementById("modal-close");
+            closeModal.addEventListener("click", modalOff);
+        })
+    </script>
+</head>
+<body>
+    <p class="click-modal" data-content="<p>클릭1이에요</p><img src='https://i.namu.wiki/i/hocN86rNtMPJnwOhLtvtQhkAGIURx7RvKhn8XLHeyw0SS-sHEI6j2TTymILDjIz7HPZALCFYXozZDsL8mNFLXgJ-rc-zISzuTM6UURG-u3pgfF8hha9PB0BY6VVBG0BKo8vJet0Xb0K91CilXH3tKQ.webp'><p>이 사진은 ~~~</p>"> 클릭1 </p>
+    <p class="click-modal" data-content="<p>클릭2에요</p><img src='https://flexible.img.hani.co.kr/flexible/normal/590/590/imgdb/resize/2007/1227/68227042_20071227.jpg'><p>이 사진은 ~~~</p>"> 클릭2 </p>
+
+    <div id="modal">
+        <div id="modal-close">
+            &times;
+        </div>
+        <div id="modal-content">
+            abc
+        </div>
+    </div>
+</body>
+</html>
