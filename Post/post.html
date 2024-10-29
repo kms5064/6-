@@ -77,7 +77,7 @@
             background-size: cover;
         }
 
-        #mytitle {
+        .mytitle>button {
             width: 300px;
             height: 50px;
             background-color: transparent;
@@ -172,7 +172,10 @@
     
 
     <main>
-        <div id="mytitle">
+        <div id="mytitle" style="height: 250px;color: red;display: grid;flex-direction: column;align-items: center;justify-content: center;
+        background-image: url('https://images.unsplash.com/photo-1511992243105-2992b3fd0410?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        background-position: center;
+        background-size: cover;">
             <h1>방명록</h1>
         </div>
 
@@ -341,6 +344,11 @@
     const btnOpenModal = document.getElementById('show_team_info');
     const printing_info = document.getElementById('printing_info');
     btnOpenModal.addEventListener("click", async function(){
+
+        printing_info.innerHTML = ""
+        
+
+
         let reading = await getDoc(doc(db, "TeamInfo",'p2r4MtXFMF3HF8K0fhjC'))
         let reading_data = reading.data();
 
