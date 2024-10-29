@@ -64,6 +64,9 @@
                 <label>좋아하는 음식</label>
                 <input type="email" id="favorite_food">
 
+                <label>MBTI</label>
+                <input type="email" id="mbti">
+
                 <label>자신의 한 마디</label>
                 <input type="email" id="first_word">
             </div>
@@ -112,8 +115,9 @@
         let name = document.getElementById('name').value;
         let role = document.getElementById('role').value;
         let food = document.getElementById('favorite_food').value;
+        let mbti = document.getElementById('mbti').value;
         let first_word = document.getElementById('first_word').value;
-        let input_data = {'image' : image, 'name' : name, 'role' : role, 'food' : food, 'first_word' : first_word};
+        let input_data = {'image' : image, 'name' : name, 'role' : role, 'food' : food,'mbti' : mbti, 'first_word' : first_word};
         await addDoc(collection(db, "TeamInfo"), input_data)
         self.close();
 
