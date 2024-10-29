@@ -273,8 +273,8 @@
                 </div>
                 
 
-                <div id = "printing_info"class="modal-content">
-                    <p class="modaltitle">게시판</p>
+                <div id = "printing_info" class="modal-content">
+                    
                 </div>
 
 
@@ -317,20 +317,55 @@
     
 
     
-    const test = document.getElementById("input_team_info").addEventListener('click', async function (){
-        //window.open(`testfolder/team_info.html?data=${"foods"}`, 'popup', 'width=400,height=300');
-        window.open('testfolder/Create_table.html', 'popup', 'width=800,height=600');
-    })
+    
 
 
 
     
     //CRUD의 C
+    const test = document.getElementById("input_team_info").addEventListener('click', async function (){
+        //window.open(`testfolder/team_info.html?data=${"foods"}`, 'popup', 'width=400,height=300');
+        window.open('testfolder/Create_table.html', 'popup', 'width=800,height=600');
+    })
+
     
     //CRUD의 R
     const modal = document.getElementById('info_modal');
     const btnOpenModal = document.getElementById('show_team_info');
-    btnOpenModal.addEventListener("click", function(){
+    const printing_info = document.getElementById('printing_info');
+    btnOpenModal.addEventListener("click", async function(){
+        let reading = await getDoc(doc(db, "TeamInfo",'BfCpkL0hKi68CxfeulFe'))
+        let reading_data = reading.data();
+
+        
+        
+       
+        
+
+        
+        let name = reading_data.name;
+        var get_name = document.createElement('h1')
+        get_name.textContent = "이름 : " + name;
+        printing_info.appendChild(get_name);
+
+        let role = reading_data.role;
+        var get_role = document.createElement('h3')
+        get_role.textContent = "작업 : " + role;
+        printing_info.appendChild(get_role)
+
+        let food = reading_data.food;
+        var get_food = document.createElement('h3')
+        get_food.textContent = "좋아하는 음식 : " + food;
+        printing_info.appendChild(get_food)
+
+        let first_word = reading_data.first_word;
+        var get_first_word = document.createElement('h3')
+        get_first_word.textContent = "좌우명 : " + first_word;
+        printing_info.appendChild(get_first_word)
+
+
+
+        console.log(name);
 
 
 
