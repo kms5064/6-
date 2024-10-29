@@ -69,7 +69,7 @@
             </div>
 
             <input type="button" value="닫 기" onclick="self.close();" />
-            <input type="button" value="이동 후 닫기" onclick="move_close();" />
+            <input type="button" id = "create-close" value="이동 후 닫기"/>
 
 
 
@@ -106,7 +106,20 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
+    const createbutton = document.getElementById('create-close');
+    createbutton.addEventListener('click', async ()=>{
+        let image = document.getElementById('picture').value;
+        let name = document.getElementById('name').value;
+        let role = document.getElementById('role').value;
+        let food = document.getElementById('favorite_food').value;
+        let first_word = document.getElementById('first_word').value;
+        let input_data = {'image' : image, 'name' : name, 'role' : role, 'food' : food, 'first_word' : first_word};
+        await addDoc(collection(db, "TeamInfo"), input_data)
+        self.close();
 
+
+        
+    })
 
 
 
@@ -149,6 +162,9 @@
 </script>
 
 <script>
+
+    
+
     //이 함수는 이미지 파일을 올렸을 때 프리뷰를 만든다.
     function ReadUrl(input) {
         var reader = new FileReader();
