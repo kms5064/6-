@@ -187,9 +187,9 @@
         }
 
         .fav-res-box {
-            border: 3px solid #ff3d00;
-            border-radius: 40px;
-            height: 200px;
+            border: 2px solid #ff3d00;
+            border-radius: 100px;
+            height: 300px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -215,7 +215,8 @@
 
         #modal {
             display: none;
-            background-color: yellowgreen;
+            background-color: white;
+            border: 3px solid #ff3d00;
             width: 600px;
             height: 500px;
             overflow-y: auto;
@@ -249,7 +250,7 @@
         } /* 모달창 이미지 */
 
         #modal a {
-            color:aquamarine;
+            color:black;
         }
 
         #modal a:hover {
@@ -303,7 +304,7 @@
                 <ul>
                     <li><img class="home" src="image/home.png"><a href="team_introduce.html" title="팀 소개">&nbsp;팀 소개</a></li>
                     <li><img class="labtop" src="image/labtop.png"><a href="team_info.html" title="멤버 소개"> &nbsp;멤버 소개</a></li>
-                    <li><img class="book" src="image/book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
+                    <li><img class="book" src="image/book.png"><a href="guest.book_v1" title="방명록"> &nbsp;방명록</a></li>
                     <li><img class="ping" src="image/ping.png"><a href="#" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
                 </ul>
             </nav>
@@ -314,36 +315,75 @@
             <div class="fav-res-subtitle"><!--네비게이터 항목-->
                 <p>멤버들이 추천하는 맛집</p>
             </div>
-    
             <div class="fav-res"><!--박스 1-->
-                <div class="fav-res-box">
-                    <p>맛집 1</p>
-                </div>
+                <div class="fav-res-box" data-content="
+                <img src='https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA1MTlfMjU3%2FMDAxNjUyODk3ODk5MjQ2.kNiNIljWQrVNy2hLgjfG-OtkaZjwGt8nxHRddWjYNx0g.iAl7I1xyiYSHZrQ9Tf0dukvJQKknGaWS6_BExIUVAIMg.JPEG%2Fupload_71bf6c01272bbca9399bc1fe34c962dc.jpeg%3Ftype%3Dw1500_60_sharpen'>
+                <h3>노량본가닭꼬치</h3>
+                <p>추천메뉴: 양념 닭꼬치</p>
+                <p>별점: ⭐⭐⭐⭐</p>
+                <p>특징: 요즘에는 아주 드문 튀긴 닭꼬치 튀김이고 가격도 저렴해서, 시간 날 때마다 걸어서 먹고 와요.</p>
+                <a href = 'https://map.naver.com/p/search/%EC%9B%90%EC%A1%B0%EB%85%B8%EB%9F%89%EB%B3%B8%EA%B0%80%EB%8B%AD%EA%BC%AC%EC%B9%98/place/67836751?c=15.00,0,0,0,dh&isCorrectAnswer=true' target = '_black'>링크</a>
+                ">
+                    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190501_260%2F1556682869568SwT4O_JPEG%2FupIoPB79CQEYq1iOae7NRNHJ.jpg"/ style="width:230px; height:180px">
+                    <h3>이준성의 노량진 맛집!</h3>
+                    </div>
             </div>
             <div class="fav-res"><!--박스 2-->
-                <div class="fav-res-box">
-                    <p>맛집 2</p>
+                <div class="fav-res-box" data-content="
+                <img src='https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220103_13%2F16411938778923SDhV_JPEG%2F03.jpg'>
+                <h3>제스티살룬</h3>
+                <p>추천메뉴: 와사비 쉬림프 버거</p>
+                <p>별점: ⭐⭐⭐⭐</p>
+                <p>특징: 다진 새우를 뭉쳐 만든 패티가 식감도좋고 맛있습니다!</p>
+                <a href = 'https://map.naver.com/p/search/%EC%A0%9C%EC%8A%A4%ED%8B%B0%EC%82%B4%EB%A3%AC/place/1902874356?c=15.00,0,0,0,dh&placePath=/menu' target = '_black'>링크</a>
+                ">
+                    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220513_6%2F1652431380224JLhlD_JPEG%2F%25C4%25B8%25C3%25B36.JPG"/ style="width:230px; height:180px">
+                    <h3>김민성의 연남동 맛집!</h3>
+                    
                 </div>
             </div>
             <div class="fav-res"><!--박스 3-->
-                <div class="fav-res-box">
-                    <p>맛집 3</p>
+                <div class="fav-res-box" data-content="
+                <img src='https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEwMjJfNTUg%2FMDAxNzI5NTYyMzA3ODAy.gpqDw_Iy20XEpYyfEBwJp6TcA-Gya8hiwPkUTVipBB4g.npXx9ZOWe0E-Papm3hPzCbtbo_456dSQ_wpFNQRbog8g.JPEG%2F1000008394.jpg.jpg%3Ftype%3Dw1500_60_sharpen'>
+                <h3>봉용불고기</h3>
+                <p>추천메뉴: 돼지고기</p>
+                <p>별점: ⭐⭐⭐⭐</p>
+                <p>특징: 파채가 매우 맛있습니다 다른 삼겹살 집들과 차원이 달라요!</p>
+                <a href = 'https://map.naver.com/p/entry/place/17288647?c=15.00,0,0,0,dh&placePath=/home' target = '_black'>링크</a>
+                ">
+                    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200316_3%2F15843532080102KNSu_JPEG%2FL9nC1vr5U9IZK0xONZds6A1P.jpg"/ style="width:230px; height:180px">
+                    <h3>김용우의 용암동 맛집!</h3>
+                    
                 </div>
             </div>
             <div class="fav-res"><!--박스 4-->
-                <div class="fav-res-box" data-content="<p>김지웅의 OO동 맛집!</p><p>OO동 수제버거</p><img src='https://cdn.ypsori.com/news/photo/201901/14732_14780_325.jpg'><br><a href = 'https://example.com' target = '_black' > 식당 지도 링크</a><p>⭐⭐⭐ 맛있다</p>">
-                    <p>김지웅</p>
-                    <p>OO동 XX집</p>
+                <div class="fav-res-box" data-content="
+                <img src='http://imagefarm.baemin.com/smartmenuimage/upload/image/2020/3/6/arUpq1ofkyF2phVdKcjvyDzoHIRZjFY5eq9siSUBNzSoRa41r2CvHPDdYUjmvNac.jpg'>
+                <h3>토도스</h3>
+                <p>추천메뉴: 토도스 4 타코</p>
+                <p>별점: ⭐⭐⭐⭐⭐</p>
+                <p>특징: 4가지 종류의 맛있는 타코를 맛볼 수 있습니다.</p>
+                <a href = 'https://map.naver.com/p/search/%ED%86%A0%EB%8F%84%EC%8A%A4/place/36686954?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp' target = '_black'>링크</a>
+                ">
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA0MjRfMjg0%2FMDAxNzEzOTYyNjA1MjQ0.63rsLDwXGjTjZEvc_KrVjlepKdK66BBoGGeb-9eDozcg.ALGcM2nzvFeGKcF443zTVHbXn0hehof2mF-5aPF6deUg.JPEG%2FIMG_1373.jpeg"/ style="width:230px; height:180px">
+                    <h3>김지웅의 용호동 맛집!</h3>
                 </div>
             </div>
             <div class="fav-res"><!--박스 5-->
-                <div class="fav-res-box">
-                    <p>맛집 5</p>
+                <div class="fav-res-box" data-content="
+                <img src='https://postfiles.pstatic.net/MjAyNDA2MjJfMjk3/MDAxNzE5MDQ3MjYwMTk3.w2ZITW78f0vmZeLwo9eH_m3AaR4VdpcJ5CLFdY0wMuQg.23IviXyE2QW2xGCa3BYTQy92y8SH0DNltcWbGYDdbaEg.JPEG/IMG_6495.jpg?type=w966'>
+                <h3>빙동댕</h3>
+                <p>추천메뉴: 팥 인절미 빙수</p>
+                <p>별점: ⭐⭐⭐⭐</p>
+                <p>특징: 우유빙수에 뿌려진 연유와 팥 그리고 인절미의 조화로움이 좋습니다!</p>
+                <a href = 'https://map.naver.com/p/search/%EB%B9%99%EB%8F%99%EB%8C%95%20%EA%B8%88%EC%B2%9C%EC%A0%90/place/1842505250?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh' target = '_black'>링크</a>
+                ">
+                <img src="https://postfiles.pstatic.net/MjAyNDA2MjJfMzEg/MDAxNzE5MDQ2OTQ0Njkw.x7IYcl0awcErtVEVSySKnZEjeJejr7cnsP3xX5ZZn6Eg.z25yBTz8am9fjvnRUW4vS8_tmEt8ipUOV0Q6cGuaJc4g.JPEG/IMG_6492.jpg?type=w966"/ style="width:230px; height:180px">
+                    <h3>김동환의 시흥동 맛집!</h3>
                 </div>
             </div>
             <div class="fav-res"><!--박스 6-->
-                <div class="fav-res-box">
-                    <p>맛집 6</p>
+                
                 </div>
             </div>
         </div>

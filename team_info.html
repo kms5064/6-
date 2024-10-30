@@ -96,7 +96,6 @@
             text-align: center;
             line-height: 15px;
         }
-
         .information {
             width: 1280px;
             height: 1000px;
@@ -179,21 +178,45 @@
                     top:50%; 
                     left: 50%;
 
-                    width:400px;  
+                    width:500px;  
                     height:600px; 
 
                     padding:40px;  
                     border-radius: 10px;
             
-                    text-align: center;
+                    border: 2px solid #ff3d00;
 
-                    box-shadow: 0px 2px 0px 2px black;
                     transform: translate(-50%, -50%);
 
             
 
-                    background-color: gray;
+                    background-color: white;
         }
+        
+        #open_kimminsung {
+            width:100px;
+        }
+        
+        #open_kimyongwo {
+            width:100px;
+        }
+        
+        #open_kimjiwoong {
+            width:100px;
+        }
+        
+        #open_kimdonghwan {
+            width:100px;
+        }
+
+        #open_leejunsung {
+            width:100px;
+        }
+        
+        .blog {
+            text-align: center;
+        }
+        
     </style>
 </head>
 
@@ -215,7 +238,7 @@
                     <li><img class="labtop" src="image/labtop.png"><a href="#" id="member_review" title="멤버 소개">
                             &nbsp;멤버
                             소개</a></li>
-                    <li><img class="book" src="image/book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
+                    <li><img class="book" src="image/book.png"><a href="guest.book_v1" title="방명록"> &nbsp;방명록</a></li>
                     <li><img class="ping" src="image/ping.png"><a href="favorite-restaurant.html" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a>
                     </li>
                 </ul>
@@ -224,33 +247,43 @@
         <div class="information"><!--정보 들어갈 공간-->
 
             <div class="subtitle"><!--네비게이터 항목(멤버소개, 방명록 등으로 바뀌어야 함)-->
-                <p id="main_title">팀 소개</p>
+                <p id="main_title">멤버 소개</p>
             </div>
             <p>안녕하세요!</p>
-            <p>Node.js 7기 팀 소개 웹페이지 프로젝트 6조 CSSJBR입니다!</p>
+            <p>팀 CSSJBR의 멤버를 소개합니다!</p>
 
             <div id="input_data" class="row row-cols-2 row-cols-md-3 g-4"><!--박스 전체-->
                 <div id="leejunsung" class="object">
                     
                     <div class="objectbox">
+                        
+                        <img id = "open_leejunsung", src="image/junsung.png" style="width: 60%; height: 70%; border: 20px;"> 
                         <p>
                             <h1>이준성</h1>
                         </p>
-                        <img id = "open_leejunsung", src="image/junsung.png" style="width: 80%; height: 70%; border: 20px;"> 
                     </div>
 
                     <div id="info_leejunsung" class="modal">
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
-                            <span style="color: white;">이준성</span>
-                            <img src="image/junsung.png" style="width: 80%; height: 70%; border: 20px;">
+                            <img src="image/junsung.png" style="width: 100%; height: 100%; border: 20px;">
                         </div>
                         <div class="modal-content">
-                            <h1>역할 : 이준성 </h1>
-                            <h2>좋아하는 요리 : 치킨</h2>
-                            <h3 style="text-transform : uppercase">mbti : infp </h3>
-                            <h4> 한 마디 : 살아남기</h4>
-                            <h5></h5>
+                            <p>이름 : 이준성 </p>
+                            <p>사는 곳 : 서울시 용산구</p>
+                            <p>MBTI : INTP </p>
+                            <p>좋아하는 음식 : 닭꼬치</p>
+                            <pre>간단한 자기소개 :
 
+안녕하세요,
+취업을 하고 싶고 인생도 잘 살고 싶은 소망을
+해결할 능력을 얻기 위해 이 곳에 참여하게 되었습니다
+</pre>
+<div class="blog">
+    <a href="https://junstar96.github.io/" width="40" height="40" target="_blank">
+    <img src="image/blog.png" width="40" height="40"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/junstar96" width="40" height="40" target="_blank">
+        <img src="image/github.png" width="40" height="40"> </a>
+    </div>
                         </div>
                     </div>
                 </div>
@@ -258,10 +291,11 @@
                 <div id="kimminsung" class="object">
                     
                     <div class="objectbox" >
+                        
+                        <img id = "open_kimminsung", src="image/minsung.png" style="width: 80%; height: 70%; border: 20px;"> 
                         <p>
                             <h1>김민성</h1>
                         </p>
-                        <img id = "open_kimminsung", src="image/minsung.png" style="width: 80%; height: 70%; border: 20px;"> 
                     </div>
 
                     <div id="info_kimminsung" class="modal">
@@ -270,12 +304,23 @@
                             <img src="image/minsung.png" style="width: 80%; height: 70%; border: 20px;"> 
                         </div>
                         <div class="modal-content">
-                            <h1>역할 : 김민성 </h1>
-                            <h2>좋아하는 요리 : 치킨</h2>
-                            <h3 style="text-transform : uppercase">mbti : infp </h3>
-                            <h4> 한 마디 : 살아남기</h4>
-                            <h5></h5>
+                            <p>이름 : 김민성 </p>
+                            <p>사는 곳 : 서울시 성북구</p>
+                            <p>MBTI : INTJ </p>
+                            <p>좋아하는 음식 : 햄버거</p>
+                            <pre>간단한 자기소개 :
 
+안녕하세요! Node.js 7기 김민성입니다!
+노래와 축구, 책과 게임을 좋아하고
+내향인이지만 먼저 말걸어주면 좋아하는 소심이입니다!
+잘부탁드려요!!
+</pre>
+<div class="blog">
+<a href="https://jhkch.tistory.com/" width="40" height="40" target="_blank">
+<img src="image/blog.png" width="40" height="40"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/kms5064" width="40" height="40" target="_blank">
+    <img src="image/github.png" width="40" height="40"> </a>
+</div>
                         </div>
 
 
@@ -287,11 +332,11 @@
                 <div id="kimyongwo" class="object">
                     
                     <div class="objectbox">
+                        
+                        <img id = "open_kimyongwo", src="image/yongwo.png" style="width: 80%; height: 70%; border: 20px;"> 
                         <p>
                             <h1>김용우</h1>
-                            
                         </p>
-                        <img id = "open_kimyongwo", src="image/yongwo.png" style="width: 80%; height: 70%; border: 20px;"> 
 
                     </div>
 
@@ -301,12 +346,23 @@
                             <img src="image/yongwo.png" style="width: 80%; height: 70%; border: 20px;"> 
                         </div>
                         <div class="modal-content">
-                            <h1>역할 : </h1>
-                            <h2>좋아하는 요리 : 치킨</h2>
-                            <h3 style="text-transform : uppercase">mbti : infp </h3>
-                            <h4> 한 마디 : 살아남기</h4>
-                            <h5></h5>
+                            <p>이름 : 김용우 </p>
+                            <p>사는 곳 : 충북 청주시</p>
+                            <p>MBTI : ISFJ </p>
+                            <p>좋아하는 음식 : 초밥</p>
+                            <pre>간단한 자기소개 :
 
+안녕하세요 처음으로 부트캠프에 참여하게 된 김용우 입니다
+게임 및 운동을 좋아하고
+실력있는 프로그래머가 되고싶습니다
+모두들 다같이 열심히 해봐요!
+</pre>
+<div class="blog">
+    <a href="https://velog.io/@thiswizard/posts" width="40" height="40" target="_blank">
+    <img src="image/blog.png" width="40" height="40"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/thiswizard" width="40" height="40" target="_blank">
+        <img src="image/github.png" width="40" height="40"> </a>
+    </div>
                         </div>
 
 
@@ -330,11 +386,7 @@
                             <img id = "open_kimdongjin", src="image/dongjin.png" style="width: 80%; height: 70%; border: 20px;"> 
                         </div>
                         <div id="printing_info" class="modal-content">
-                            <h1>역할 : </h1>
-                            <h2>좋아하는 요리 : 치킨</h2>
-                            <h3 style="text-transform : uppercase">mbti : infp </h3>
-                            <h4> 한 마디 : 살아남기</h4>
-                            <h5></h5>
+                  
 
                         </div>
 
@@ -359,12 +411,24 @@
                             <img src="image/jiwoong.png" style="width: 80%; height: 70%; border: 20px;"> 
                         </div>
                         <div class="modal-content">
-                            <h1>역할 : </h1>
-                            <h2>좋아하는 요리 : 치킨</h2>
-                            <h3 style="text-transform : uppercase">mbti : infp </h3>
-                            <h4> 한 마디 : 살아남기</h4>
-                            <h5></h5>
+                            <p>이름 : 김지웅 </p>
+                            <p>사는 곳 : 경남 창원시</p>
+                            <p>MBTI : INFP </p>
+                            <p>좋아하는 음식 : 짜장면</p>
+                            <pre>간단한 자기소개 :
 
+안녕하세요! Node.js 7기 김지웅입니다!
+게임을 하는 것과 유튜브 보고 넷플릭스 보는 것을 좋아합니다.
+낯을 많이 가려 걱정했지만,
+좋은 분들과 같이 공부하게 되어서 다행이라고 생각합니다.
+잘 부탁드립니다.!!
+</pre>
+<div class="blog">
+    <a href="https://zera1004.github.io/" width="40" height="40" target="_blank">
+    <img src="image/blog.png" width="40" height="40"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/zera1004" width="40" height="40" target="_blank">
+        <img src="image/github.png" width="40" height="40"> </a>
+    </div>
                         </div>
 
 
@@ -387,16 +451,27 @@
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <span style="color: white;">김동환</span>
                             <br>
-                            <img src="image/donghwan.png" style="width: 80%; height: 100%; border: 20px;"> 
+                            <img src="image/donghwan.png" style="width: 100%; height: 100%; border: 20px;"> 
                             
                         </div>
-                        <div class="modal-content" style="background-color: #ff3d00;">
-                            <h1>역할 : 김동환</h1>
-                            <h2>좋아하는 요리 : 치킨</h2>
-                            <h3 style="text-transform : uppercase">mbti : infp </h3>
-                            <h4> 한 마디 : 살아남기</h4>
-                            <h5></h5>
+                        <div class="modal-content">
+                            <p>이름 : 김동환 </p>
+                            <p>사는 곳 : 광명시 하안동</p>
+                            <p>MBTI : INTP </p>
+                            <p>좋아하는 음식 : 팥빙수</p>
+                            <pre>간단한 자기소개 :
 
+안녕하세요 김동환입니다!
+스포츠와 게임을 좋아해서 참여하게 됐습니다.
+잘부탁드립니다!
+
+</pre>
+<div class="blog">
+    <a href="https://velog.io/@kdhn712/posts" width="40" height="40" target="_blank">
+    <img src="image/blog.png" width="40" height="40"> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/KimDongHwan97" width="40" height="40" target="_blank">
+        <img src="image/github.png" width="40" height="40"> </a>
+    </div>
                         </div>
 
 
@@ -408,6 +483,14 @@
 
 
             </div>
+        </div>
+    </div>
+    
+    <div id="modal">
+        <div id="modal-close">
+            &times;
+        </div>
+        <div id="modal-content">
         </div>
     </div>
 </body>
