@@ -188,7 +188,8 @@
             <nav class="menu"><!--사이드 네비게이터-->
                 <ul>
                     <li><img class="home" src="home.png"><a href="#" title="팀 소개">&nbsp;팀 소개</a></li>
-                    <li><img class="labtop" src="labtop.png"><a href="#" title="멤버 소개"> &nbsp;멤버 소개</a></li>
+                    <li><img class="labtop" src="labtop.png"><a href="#" id="member_review" title="멤버 소개"> &nbsp;멤버
+                            소개</a></li>
                     <li><img class="book" src="book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
                     <li><img class="ping" src="ping.png"><a href="#" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
                 </ul>
@@ -197,12 +198,12 @@
         <div class="information"><!--정보 들어갈 공간-->
 
             <div class="subtitle"><!--네비게이터 항목(멤버소개, 방명록 등으로 바뀌어야 함)-->
-                <p>팀 소개</p>
+                <p id="main_title">팀 소개</p>
             </div>
             <p>안녕하세요!</p>
             <p>Node.js 7기 팀 소개 웹페이지 프로젝트 6조 CSSJBR입니다!</p>
 
-            <div class="introduce"><!--박스 전체-->
+            <div id="input_data" class="introduce"><!--박스 전체-->
                 <div class="cssjbr"><!--박스 1-->
                     <p>
                         CSSJBR?
@@ -240,5 +241,97 @@
         </div>
     </div>
 </body>
+<script type="module">
+    const banner_type = {
+        team_interview : "interview",
+        team_info : "info",
+        guestboob : "guestbook",
+        favorite_food : "food"  
+    }
 
+    let current_banner = banner_type.team_interview;
+
+
+    let member_review = document.getElementById('member_review');
+    let main_title = document.getElementById('main_title');
+    let input_data = document.getElementById('input_data');
+    member_review.addEventListener('click', function () {
+        main_title.innerText = "멤버 소개"
+        input_data.innerHTML = "";
+        let test_child = document.createElement('div');
+
+        let member_info = `
+        <div class="object">
+                    <p>
+                        이준성
+                    </p>
+                    <div class="objectbox">
+                        <h1>역할 : </h1> 
+                        <h2>좋아하는 요리 : 치킨</h2> 
+                        <h3 style : "text-transform : uppercase" >mbti : infp </h3> 
+                        <h4> 한 마디 : 살아남기</h4> 
+                        <h5></h5> 
+                    </div>
+
+                    <div id = "info_modal" class = "modal" style = "
+                    position:fixed;
+                    display:none;
+
+                    top:50%; 
+                    left: 50%;
+
+                    width:400px;  
+                    height:600px; 
+
+                    padding:40px;  
+                    border-radius: 10px;
+            
+                    text-align: center;
+
+                    box-shadow: 0px 2px 0px 2px black;
+                    transform: translate(-50%, -50%);
+
+            
+
+                    background-color: gray;">
+                    <div class="modaltitle"> 
+                        <span style="color: white;">개인 정보</span>
+                    </div>
+                    <div id = "printing_info" class="modal-content">
+                        
+                    </div>
+    
+    
+                    
+    
+                </div>
+                </div>
+
+        `
+
+        let member_info2 = `
+        <div class="object">
+                    <p>
+                        이준성
+                    </p>
+                    <div class="objectbox">
+                        <h1>역할 : </h1> 
+                        <h2>좋아하는 요리 : 치킨</h2> 
+                        <h3 style : "text-transform : uppercase" >mbti : infp </h3> 
+                        <h4> 한 마디 : 살아남기</h4> 
+                        <h5></h5> 
+                    </div>
+                </div>
+
+        `
+        let info3 = member_info + member_info2;
+
+
+        input_data.innerHTML = info3;
+
+
+
+    })
+</script>
 </html>
+
