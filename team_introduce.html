@@ -188,7 +188,7 @@
             <nav class="menu"><!--사이드 네비게이터-->
                 <ul>
                     <li><img class="home" src="home.png"><a href="#" title="팀 소개">&nbsp;팀 소개</a></li>
-                    <li><img class="labtop" src="labtop.png"><a href="#" id="member_review" title="멤버 소개"> &nbsp;멤버
+                    <li><img class="labtop" src="labtop.png"><a href="team_info.html" id="member_review" title="멤버 소개"> &nbsp;멤버
                             소개</a></li>
                     <li><img class="book" src="book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
                     <li><img class="ping" src="ping.png"><a href="#" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
@@ -255,10 +255,10 @@
     let member_review = document.getElementById('member_review');
     let main_title = document.getElementById('main_title');
     let input_data = document.getElementById('input_data');
+
     member_review.addEventListener('click', function () {
         main_title.innerText = "멤버 소개"
         input_data.innerHTML = "";
-        let test_child = document.createElement('div');
 
         let member_info = `
         <div class="object">
@@ -322,7 +322,6 @@
                         <h5></h5> 
                     </div>
                 </div>
-
         `
         let info3 = member_info + member_info2;
 
@@ -332,6 +331,9 @@
 
 
     })
+
+    let modal = document.getElementById('info_modal')
+    
 </script>
 </html>
 
