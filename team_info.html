@@ -425,9 +425,13 @@
     for(var i = 0;i<modal_list.length;i++)
     {
         let check = i;
-        modal_list[check].addEventListener('click', function() {    
-        alert(`${check} 닫힘`)
-        modal_list[check].style.display = 'none';})
+        let modal = modal_list[check];
+        modal.addEventListener('click', function() {    
+            alert(`${check} 닫힘`)
+            this.style.display = 'none';
+
+            console.log(this.style.display);
+        })
     }
 
     //여기가 각각의 팀 정보 여는 곳
@@ -439,7 +443,7 @@
         modal_leejunsung.style.display = 'grid';
     })
 
-    let kimminsung = document.getElementById('kimminsung');
+    let kimminsung = document.getElementById('open_kimminsung');
 
     kimminsung.addEventListener('click', function () {
         let modal_leejunsung = document.getElementById('info_kimminsung');
@@ -453,7 +457,7 @@
         modal_leejunsung.style.display = 'grid';
     })
 
-    let kimdongjin = document.getElementById('kimdongjin');
+    let kimdongjin = document.getElementById('open_kimdongjin');
 
     kimdongjin.addEventListener('click', function () {
         let modal_leejunsung = document.getElementById('info_kimdongjin');
@@ -467,7 +471,7 @@
         modal_leejunsung.style.display = 'grid';
     })
 
-    let kimdonghwan = document.getElementById('kimdonghwan');
+    let kimdonghwan = document.getElementById('open_kimdonghwan');
 
     kimdonghwan.addEventListener('click', function () {
         let modal_leejunsung = document.getElementById('info_kimdonghwan');
