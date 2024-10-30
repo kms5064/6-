@@ -187,7 +187,7 @@
         <div>
             <nav class="menu"><!--사이드 네비게이터-->
                 <ul>
-                    <li><img class="home" src="image/home.png"><a href="#" title="팀 소개">&nbsp;팀 소개</a></li>
+                    <li><img class="home" src="image/home.png"><a href="team" title="팀 소개">&nbsp;팀 소개</a></li>
                     <li><img class="labtop" src="image/labtop.png"><a href="#" id="member_review" title="멤버 소개"> &nbsp;멤버
                             소개</a></li>
                     <li><img class="book" src="image/book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
@@ -204,6 +204,53 @@
             <p>Node.js 7기 팀 소개 웹페이지 프로젝트 6조 CSSJBR입니다!</p>
 
             <div id="input_data" class="introduce"><!--박스 전체-->
+                <div id = "leejunsung" class="object">
+                    <p>
+                        이준성
+                    </p>
+                    <div class="objectbox">
+                        <h1>역할 : </h1> 
+                        <h2>좋아하는 요리 : 치킨</h2> 
+                        <h3 style = "text-transform : uppercase" >mbti : infp </h3> 
+                        <h4> 한 마디 : 살아남기</h4> 
+                        <h5></h5> 
+                    </div>
+
+                    <div id = "info_leejunsung" class = "modal" style = "
+                    position:fixed;
+                    display:none;
+
+                    top:50%; 
+                    left: 50%;
+
+                    width:400px;  
+                    height:600px; 
+
+                    padding:40px;  
+                    border-radius: 10px;
+            
+                    text-align: center;
+
+                    box-shadow: 0px 2px 0px 2px black;
+                    transform: translate(-50%, -50%);
+
+            
+
+                    background-color: gray;">
+                    <div class="modaltitle"> 
+                        <span style="color: white;">개인 정보</span>
+                    </div>
+                    <div id = "printing_info" class="modal-content">
+                        
+                    </div>
+    
+    
+                    
+    
+                </div>
+                </div>
+
+        `
                 
             </div>
         </div>
@@ -223,13 +270,19 @@
     let member_review = document.getElementById('member_review');
     let main_title = document.getElementById('main_title');
     let input_data = document.getElementById('input_data');
+    let leejunsung = document.getElementById('leejunsung');
+    let modal = document.getElementById("info_leejunsung");
+
+
+    leejunsung.addEventListener('click', function(){
+        modal.style.display = flex;
+
+    })
 
     member_review.addEventListener('click', function () {
-        main_title.innerText = "멤버 소개"
-        input_data.innerHTML = "";
 
         let member_info = `
-        <div class="object">
+        <div id = "leejunsung" class="object">
                     <p>
                         이준성
                     </p>
@@ -299,8 +352,6 @@
 
 
     })
-
-    let modal = document.getElementById('info_modal')
     
 </script>
 </html>
