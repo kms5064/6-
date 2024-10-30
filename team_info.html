@@ -382,7 +382,7 @@
                             <span style="color: white;">개인 정보</span>
                         </div>
                         <div class="modal-content">
-                            <h1>역할 : </h1>
+                            <h1>역할 : 김동환</h1>
                             <h2>좋아하는 요리 : 치킨</h2>
                             <h3 style="text-transform : uppercase">mbti : infp </h3>
                             <h4> 한 마디 : 살아남기</h4>
@@ -419,13 +419,14 @@
 
     let modal_list = document.querySelectorAll('.modal');
 
-    modal_list.forEach(element => {
-        element.addEventListener('click', function() {
-        element.style.display = 'none';
+    for(var i = 0;i<modal_list.length;i++)
+    {
+        console.log(`${i}`)
+        modal_list[i].addEventListener('click', function() {
+        alert(`${i} 닫힘`)
+        modal_list[i].style.display = 'none';
     })
-
-    });
-
+    }
 
 
     let leejunsung = document.getElementById('open_leejunsung');
