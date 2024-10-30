@@ -12,12 +12,15 @@
             height: 1000px; 
         }
         nav {
-            width: 200px;
-            background-color: #ff3d00;
-            padding: 30px;
-            border: 2px solid #ff3d00; 
-            border-radius: 30px;
-            height: 200px; 
+            background-color: white;
+            box-shadow: 0px 0px 3px 0px black;
+            width: 350px;
+            height: 350px;
+            font-size: 25px;
+            float: left;
+            margin-left: 50px;
+            margin-top: 20px;
+            line-height: 70px;
 
         }
         .mainbox {
@@ -54,6 +57,10 @@
             margin-left: 50px;
             margin-top: 20px;
             line-height: 70px;
+        }
+
+        .side {
+            width: 35px;
         }
         
 
@@ -98,12 +105,13 @@
 
 
 <body>
-<nav>
+    
+<nav class="menu"><!--사이드 네비게이터-->
     <ul>
-        <li>팀소개</li> <!-- <a href="하이퍼링크주소"> 를 이용하면 클릭할떄 원하는 곳으로 이동. -->
-        <li>멤버소개</li>
-        <li>방명록</li>
-        <li>추천맛집</li>
+        <li><img class="side" src="home.png"><a href="#" title="팀 소개">&nbsp;팀 소개</a></li>
+        <li><img class="side" src="labtop.png"><a href="#" title="멤버 소개"> &nbsp;멤버 소개</a></li>
+        <li><img class="side" src="book.png"><a href="#" title="방명록"> &nbsp;방명록</a></li>
+        <li><img class="side" src="ping.png"><a href="#" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
     </ul>
 </nav>
 
