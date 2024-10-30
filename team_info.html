@@ -479,9 +479,11 @@
     
 
     member_review.addEventListener('click', function () {
+        main_title.innerText = "멤버 소개"
+        input_data.innerHTML = "";
 
         let member_info = `
-        <div id = "leejunsung" class="object">
+        <div class="object">
                     <p>
                         이준성
                     </p>
@@ -552,6 +554,7 @@
 
     })
 
+    let modal = document.getElementById('info_modal')
+    
 </script>
-
 </html>
