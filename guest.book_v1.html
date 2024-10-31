@@ -273,8 +273,6 @@
         // Firebase 인스턴스 초기화
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
-
-
         document.addEventListener('DOMContentLoaded', async function () { // addEventListener는 addEventListener(1,2) 에서 1번 이벤트가 일어 났을떄 2번(함수)를 실행시킨다
             $("#postindbtn").click(async function () {
                 let name = $("#name").val();
@@ -288,8 +286,6 @@
                     'name': name,
                     'message': message,
                 };
-
-
                 await addDoc(collection(db, "albums2"), doc);
                 alert(' 저장 완료!')
                 window.location.reload();
@@ -298,7 +294,6 @@
             let docs = await getDocs(collection(db, "albums2"));
             docs.forEach((docData) => {
                 let row = docData.data();
-                console.log(docData.id);
                 let name = row['name']
                 let message = row['message']
                 let auto_add_div = document.createElement('div'); // div 태그를 자동으로 생성해줌
@@ -383,7 +378,7 @@
                     <!-- form-control는 input 이나 textarea 같은 입력칸을 예쁘게 꾸며주는 부트스트랩기능-->
                 </div>
 
-                <button id="postindbtn" class="btn btn-primary">등록하기</button>
+                <button id="postindbtn" type="button" class="btn btn-primary">등록하기</button>
 
             </form>
 
