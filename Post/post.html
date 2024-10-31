@@ -305,7 +305,7 @@
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { collection, addDoc,deleteDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
     import { getDocs,getDoc, doc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 
@@ -325,8 +325,8 @@
     const db = getFirestore(app);
 
     
-
-    
+    //여기에 ID나 이름이 들어가 있다.
+    let id_list = [ ];
     
 
 
@@ -348,9 +348,16 @@
         printing_info.innerHTML = ""
         
 
-
-        let reading = await getDoc(doc(db, "TeamInfo",'p2r4MtXFMF3HF8K0fhjC'))
-        let reading_data = reading.data();
+        
+        let reading = await getDocs(collection(db, "TeamInfo"))
+        reading.forEach(element => {
+            let row = element.data();
+            let name = row['name'];
+            let id = element.id;
+            console.log(id);
+            id_list.push({"name" : name, "id" : id});
+            
+        });
 
         
         
