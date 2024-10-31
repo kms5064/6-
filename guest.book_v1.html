@@ -274,29 +274,27 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        $("#postindbtn").click(async function () {
-            let name = $("#name").val();
-            let message = $("#message").val();
-
-            if (name.length == 0 || message.length == 0) {
-                alert('이름과 메시지를 입력바랍니다!.');
-                return;
-            }
-            
-            let doc = {
-                'name': name,
-                'message': message,
-            };
-
-
-            await addDoc(collection(db, "albums2"), doc);
-            alert(' 저장 완료!')
-            window.location.reload();
-        })
-
 
         document.addEventListener('DOMContentLoaded', async function () { // addEventListener는 addEventListener(1,2) 에서 1번 이벤트가 일어 났을떄 2번(함수)를 실행시킨다
+            $("#postindbtn").click(async function () {
+                let name = $("#name").val();
+                let message = $("#message").val();
+                if (name.length == 0 || message.length == 0) {
+                    alert('이름과 메시지를 입력바랍니다!.');
+                    return;
+                }
+                
+                let doc = {
+                    'name': name,
+                    'message': message,
+                };
 
+
+                await addDoc(collection(db, "albums2"), doc);
+                alert(' 저장 완료!')
+                window.location.reload();
+            });
+            
             let docs = await getDocs(collection(db, "albums2"));
             docs.forEach((docData) => {
                 let row = docData.data();
@@ -385,7 +383,7 @@
                     <!-- form-control는 input 이나 textarea 같은 입력칸을 예쁘게 꾸며주는 부트스트랩기능-->
                 </div>
 
-                <button class="btn btn-primary">등록하기</button>
+                <button id="postindbtn" class="btn btn-primary">등록하기</button>
 
             </form>
 
