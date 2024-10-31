@@ -216,6 +216,17 @@
         .blog {
             text-align: center;
         }
+
+        #modal-close {
+            float:right;
+            font-size: 40px;
+            padding-right: 10px;
+            display: inline;
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        } /* 모달창 x 버튼 */
         
     </style>
 </head>
@@ -238,7 +249,7 @@
                     <li><img class="labtop" src="image/labtop.png"><a href="#" id="member_review" title="멤버 소개">
                             &nbsp;멤버
                             소개</a></li>
-                    <li><img class="book" src="image/book.png"><a href="guest.book_v1" title="방명록"> &nbsp;방명록</a></li>
+                    <li><img class="book" src="image/book.png"><a href="guest.book_v1.html" title="방명록"> &nbsp;방명록</a></li>
                     <li><img class="ping" src="image/ping.png"><a href="favorite-restaurant.html" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a>
                     </li>
                 </ul>
@@ -264,6 +275,9 @@
                     </div>
 
                     <div id="info_leejunsung" class="modal">
+                        <div id="modal-close">
+                            &times;
+                        </div>
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <img src="image/junsung.png" style="width: 100%; height: 100%; border: 20px;">
                         </div>
@@ -299,6 +313,9 @@
                     </div>
 
                     <div id="info_kimminsung" class="modal">
+                        <div id="modal-close">
+                            &times;
+                        </div>
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <span style="color: white;">김민성</span>
                             <img src="image/minsung.png" style="width: 80%; height: 70%; border: 20px;"> 
@@ -341,6 +358,9 @@
                     </div>
 
                     <div id="info_kimyongwo" class="modal">
+                        <div id="modal-close">
+                            &times;
+                        </div>
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <span style="color: white;">김용우</span>
                             <img src="image/yongwo.png" style="width: 80%; height: 70%; border: 20px;"> 
@@ -381,6 +401,9 @@
                     </div>
 
                     <div id="info_kimdongjin" class="modal">
+                        <div id="modal-close">
+                            &times;
+                        </div>
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <span style="color: white;">김동진</span>
                             <img id = "open_kimdongjin", src="image/dongjin.png" style="width: 80%; height: 70%; border: 20px;"> 
@@ -406,6 +429,9 @@
                     </div>
 
                     <div id="info_kimjiwoong" class="modal">
+                        <div id="modal-close">
+                            &times;
+                        </div>
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <span style="color: white;">김지웅</span>
                             <img src="image/jiwoong.png" style="width: 80%; height: 70%; border: 20px;"> 
@@ -448,6 +474,9 @@
                     </div>
 
                     <div id="info_kimdonghwan" class="modal">
+                        <div id="modal-close">
+                            &times;
+                        </div>
                         <div class="modaltitle" style="background-color: transparent; padding: 20px; margin: 20px auto 10px auto; border-radius: 5px;">
                             <span style="color: white;">김동환</span>
                             <br>
@@ -485,14 +514,6 @@
             </div>
         </div>
     </div>
-    
-    <div id="modal">
-        <div id="modal-close">
-            &times;
-        </div>
-        <div id="modal-content">
-        </div>
-    </div>
 </body>
 <script type="module">
     const banner_type = {
@@ -509,18 +530,23 @@
     let main_title = document.getElementById('main_title');
     let input_data = document.getElementById('input_data');
 
-    let modal_list = document.querySelectorAll('.modal');
+    // 모든 모달 요소 선택
+    const modals = document.querySelectorAll('.modal');
 
-    for(var i = 0;i<modal_list.length;i++)
-    {
-        let check = i;
-        let modal = modal_list[check];
-        modal.addEventListener('click', function() {    
-            this.style.display = 'none';
-
-            console.log(this.style.display);
-        })
+    // 모달 닫기 함수
+    function modalOff(modal) {
+        modal.style.display = "none";
     }
+
+    // 각 모달에 대해 닫기 버튼 추가
+    modals.forEach(modal => {
+        const closeModal = modal.querySelector('#modal-close'); // 각 모달 내의 닫기 버튼 선택
+        if (closeModal) {
+            closeModal.addEventListener("click", () => modalOff(modal)); // 클릭 시 해당 모달 닫기
+        }
+    });
+
+    
 
 
     let leejunsung = document.getElementById('open_leejunsung');
