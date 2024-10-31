@@ -305,7 +305,7 @@
                     <li><img class="home" src="image/home.png"><a href="team_introduce.html" title="팀 소개">&nbsp;팀 소개</a></li>
                     <li><img class="labtop" src="image/labtop.png"><a href="team_info.html" title="멤버 소개"> &nbsp;멤버 소개</a></li>
                     <li><img class="book" src="image/book.png"><a href="guest.book_v1.html" title="방명록"> &nbsp;방명록</a></li>
-                    <li><img class="ping" src="image/ping.png"><a onclick="GetFood()" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
+                    <li><img class="ping" src="image/ping.png"><a href="#" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a></li>
                 </ul>
             </nav>
         </div>
@@ -314,22 +314,6 @@
 
             <div class="fav-res-subtitle"><!--네비게이터 항목-->
                 <p>멤버들이 추천하는 맛집</p>
-            </div>
-
-            <div id = "input_restaurant" style="margin:auto;">
-                <h1>별도에 추가할 맛집</h1>
-                <input type = "text" id = "restaurant_name" placeholder="레스토랑 이름">
-                <input type = "text" id = "restaurant_menu" placeholder="추천 메뉴">
-                <select class="form-select" id="restaurant_star">
-                    <option selected>선택</option>
-                    <option value="⭐">⭐</option>
-                    <option value="⭐⭐">⭐⭐</option>
-                    <option value="⭐⭐⭐">⭐⭐⭐</option>
-                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
-                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
-                </select>
-                <input type = "text" id = "restaurant_info" placeholder="추천 이유">
-                <input type = "text" id = "restaurant_link" placeholder="링크">
             </div>
             <div class="fav-res"><!--박스 1-->
                 <div class="fav-res-box" data-content="
@@ -398,7 +382,10 @@
                     <h3>김동환의 시흥동 맛집!</h3>
                 </div>
             </div>
-            
+            <div class="fav-res"><!--박스 6-->
+                
+                </div>
+            </div>
         </div>
 
         <div id="modal">
@@ -410,33 +397,5 @@
         </div>
     </div>
 </body>
-<script>
-    function GetFood(){
-        const manulist = document.querySelector(".favorite-restaurant");
-        
-        let temp_html = `
-    <div class="fav-res">
-                <div class="fav-res-box" data-content="
-                <img src='https://postfiles.pstatic.net/MjAyNDA2MjJfMjk3/MDAxNzE5MDQ3MjYwMTk3.w2ZITW78f0vmZeLwo9eH_m3AaR4VdpcJ5CLFdY0wMuQg.23IviXyE2QW2xGCa3BYTQy92y8SH0DNltcWbGYDdbaEg.JPEG/IMG_6495.jpg?type=w966'>
-                <h3>빙동댕</h3>
-                <p>추천메뉴: 팥 인절미 빙수</p>
-                <p>별점: ⭐⭐⭐⭐</p>
-                <p>특징: 우유빙수에 뿌려진 연유와 팥 그리고 인절미의 조화로움이 좋습니다!</p>
-                <a href = 'https://map.naver.com/p/search/%EB%B9%99%EB%8F%99%EB%8C%95%20%EA%B8%88%EC%B2%9C%EC%A0%90/place/1842505250?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh' target = '_black'>링크</a>
-                ">
-                <img src="https://postfiles.pstatic.net/MjAyNDA2MjJfMzEg/MDAxNzE5MDQ2OTQ0Njkw.x7IYcl0awcErtVEVSySKnZEjeJejr7cnsP3xX5ZZn6Eg.z25yBTz8am9fjvnRUW4vS8_tmEt8ipUOV0Q6cGuaJc4g.JPEG/IMG_6492.jpg?type=w966"/ style="width:230px; height:180px">
-                    <h3>김동환의 시흥동 맛집!</h3>
-                </div>
-            </div>
-    `
 
-    manulist.innerHTML = manulist.innerHTML + temp_html;
-
-
-    }
-
-
-
-    
-</script>
 </html>
