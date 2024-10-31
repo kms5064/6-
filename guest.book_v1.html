@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 
 <head>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&family=Noto+Sans+KR:wght@100..900&display=swap"
         rel="stylesheet"> <!-- 글꼴 불러오기-->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>CSSJBR</title>
     <style>
         * {
@@ -180,7 +180,7 @@
             font-size: 20px;
             line-height: 50px;
         }
-        
+
 
 
         .body {
@@ -191,6 +191,7 @@
             padding: 20px;
             flex-grow: 1;
         }
+
         .CLASS {
             border: 1px solid orange;
             padding: 10px;
@@ -210,49 +211,60 @@
         .second_box {
             margin: auto auto 20px auto;
         }
+
         .info-box {
-            border: 1px solid #ff3d00; /* 테두리 색상 */
-            background-color: #fff3e0; /* 배경색 */
-            padding: 15px; /* 내부 여백 */
-            border-radius: 5px; /* 모서리 둥글게 */
-            width: calc(48%); /* 두 개의 박스를 가로로 배치 */
-            text-align: left; /* 텍스트 정렬 */
+            border: 1px solid #ff3d00;
+            background-color: #fff3e0;
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 330px;
+            text-align: left;
+            margin-left: 5px;
         }
-        .big-info-box{
+
+        .big-info-box {
+            background-color: #fff3e0;
             font-size: 30px;
-            display: flex; /* Flexbox 사용 */
-            justify-content: space-between; /* 박스 간 간격 조정 */
-            max-width: 1500px; /* 최대 너비 설정 */
+            display: flex;
+            justify-content: space-between;
+            max-width: 2000px;
             height: 390px;
-            margin: 20px auto; /* 중앙 정렬 및 상단 여백 */
+            margin: 20px auto;
         }
-        
-        .wizard{
+
+        .wizard {
             font-weight: bold;
         }
 
+        .giant {
+            max-width: 1800px;
+        }
 
-
-
-
-
-
+        .information {
+            width: 1280px;
+            height: 1000px;
+            margin-left: 450px;
+            margin-right: 50px;
+        }
+        .subtitle > p {
+            line-height: 90px;
+        }
 
 
     </style>
     <script> // document 는 자바스크립트에서 사용할수 있는 객체 중 하나로 문서의 내용과 구조에 접근해서 조작 가능
-        document.addEventListener('DOMContentLoaded', function() { // addEventListener는 addEventListener(1,2) 에서 1번 이벤트가 일어 났을떄 2번(함수)를 실행시킨다
-            document.getElementById('middle_box').addEventListener('submit', function(event) {
+        document.addEventListener('DOMContentLoaded', function () { // addEventListener는 addEventListener(1,2) 에서 1번 이벤트가 일어 났을떄 2번(함수)를 실행시킨다
+            document.getElementById('middle_box').addEventListener('submit', function (event) {
                 event.preventDefault(); // 특정 이벤트의 기본 동작을 방지(폼 제출 , 업로드 , 체크박스 선택 , 오른쪽 클릭 , 키입력)
-        
+
                 let name = document.getElementById('name').value;//getElementById([id])는()안에 특정 요소를 선택
                 let message = document.getElementById('message').value;
                 let auto_add_div = document.createElement('div'); // div 태그를 자동으로 생성해줌
-                
+
 
                 if (name.length == 0 || message.length == 0) {
-                    alert('이름과 메시지를 입력바랍니다!.'); 
-                    return; 
+                    alert('이름과 메시지를 입력바랍니다!.');
+                    return;
                 }
 
 
@@ -264,13 +276,13 @@
                     <button class="remov_button">삭제</button>
                 `; //innerHTML 은 작성한 HTML 코드 생성한다
 
-                document.getElementById('bottom').appendChild(auto_add_div); 
+                document.getElementById('bottom').appendChild(auto_add_div);
                 //appendChild는 자식요소를 추가해준다
-                
-                auto_add_div.querySelector('.remov_button').addEventListener('click', function() {
-                    auto_add_div.remove(); 
+
+                auto_add_div.querySelector('.remov_button').addEventListener('click', function () {
+                    auto_add_div.remove();
                 });
-    
+
             });
         });
     </script>
@@ -278,7 +290,7 @@
 
 
 <body>
-    
+
     <div class="title">
         <img
             src="data:image/png;base64,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">
@@ -288,80 +300,69 @@
 
 
     <div class="black"><!--구분선--></div>
-    <div>
 
-    <div>
+    <div class="giant">
         <div>
-            <nav class="menu"><!--사이드 네비게이터-->
-                <ul>
-                    <li><img class="home" src="image/home.png"><a href="team_introduce.html" title="팀 소개">&nbsp;팀 소개</a>
-                    </li>
-                    <li><img class="labtop" src="image/labtop.png"><a href="team_info.html" id="member_review" title="멤버 소개">
-                            &nbsp;멤버
-                            소개</a></li>
-                    <li><img class="book" src="image/book.png"><a href="guest.book.html" title="방명록"> &nbsp;방명록</a></li>
-                    <li><img class="ping" src="image/ping.png"><a href="favorite-restaurant.html" title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div class="big-info-box">
-    <div class="info-box">
-        <p>"소프트웨어는 엔지니어링의 한 형태이며, 그것을 만든 사람의 마음과 손을 반영한다."</p>
-        <p class="wizard">Bjarne Stroustrup</p>
-    </div>
-    <div class="info-box">
-        <p>"프로그램을 만드는 것은 단순히 코드를 작성하는 것이 아닌 문제를 해결하는 것이다."</p>
-        <p class="wizard">John McCarthy</p>
-    </div>
-    <div class="info-box">
-        <p>"좋은 코드는 나쁜 코드를 반복하여 작성한 결과물이 아니다."</p>
-        <p class="wizard">Robert C. Martin</p>
-    </div><div class="info-box">
-        <p>"프로그래밍은 대단히 창의적인 작업이다. 코딩을 통해 세상을 바꿀 수 있다"</p>
-        <p class="wizard">Tim Berners-Lee</p>
-    </div>
-    <div class="info-box">
-        <p>"소프트웨어는 90%의 잘못된 코드를 작성하고 10%의 유효성을 추구하는 것이다."</p>
-        <p class="wizard">Alan Perlis</p>
-    </div>
-    <div class="info-box">
-        <p>"소프트웨어 개발에서의 대안은 항상 더 나은 대안이 아니라 그저 더 나쁜 대안일 뿐이다."</p>
-        <p class="wizard">Edgar Dijkstra</p>
-    </div>
-    </div>
-
-
-<div class="mainbox">
-    <form id="middle_box"> <!--form 태그는 form 태그 안의 내용이 서버에 제출될수있도록 그룹화 작업 -->
-
-        <div class="second_box">
-            <label for="name">이름:</label>
-            <input type="text" class="form-control" id="name" placeholder="이름을 작성하세요"> <!-- input 은 단일줄 <-> textarea는 여러줄 -->
+            <div>
+                <nav class="menu"><!--사이드 네비게이터-->
+                    <ul>
+                        <li><img class="home" src="image/home.png"><a href="team_introduce.html" title="팀 소개">&nbsp;팀
+                                소개</a>
+                        </li>
+                        <li><img class="labtop" src="image/labtop.png"><a href="team_info.html" id="member_review"
+                                title="멤버 소개">
+                                &nbsp;멤버
+                                소개</a></li>
+                        <li><img class="book" src="image/book.png"><a href="guest.book.html" title="방명록"> &nbsp;방명록</a>
+                        </li>
+                        <li><img class="ping" src="image/ping.png"><a href="favorite-restaurant.html"
+                                title="멤버들이 추천하는 맛집"> &nbsp;멤버들이 추천하는 맛집</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
-        <div class="second_box">
-            <label for="message">원하는 내용:</label>
-            <input class="form-control" id="message" placeholder="내용을 작성하세요"><!-- id는 고유 식별 <-> name은 서버에 제출될떄 해당이름--> 
-            <!-- form-control는 input 이나 textarea 같은 입력칸을 예쁘게 꾸며주는 부트스트랩기능-->
+
+    </div>
+    </div>
+    <div class="information"><!--정보 들어갈 공간-->
+
+        <div class="subtitle"><!--네비게이터 항목(멤버소개, 방명록 등으로 바뀌어야 함)-->
+            <p>방명록</p>
         </div>
-        
-        <button class="btn btn-primary">등록하기</button>
+        <p>안녕하세요!</p>
+        <p>여기는 방명록입니다!</p><!--팀 소개 인삿말s(다른 메뉴에선 바뀌어야함)-->
+        <div class="mainbox">
+            <form id="middle_box"> <!--form 태그는 form 태그 안의 내용이 서버에 제출될수있도록 그룹화 작업 -->
 
-    </form>
+                <div class="second_box">
+                    <label for="name">이름:</label>
+                    <input type="text" class="form-control" id="name" placeholder="이름을 작성하세요">
+                    <!-- input 은 단일줄 <-> textarea는 여러줄 -->
+                </div>
 
-    <div id="bottom" style="margin-top: 20px;"></div>
-</div>    
+                <div class="second_box">
+                    <label for="message">원하는 내용:</label>
+                    <input class="form-control" id="message"
+                        placeholder="내용을 작성하세요"><!-- id는 고유 식별 <-> name은 서버에 제출될떄 해당이름-->
+                    <!-- form-control는 input 이나 textarea 같은 입력칸을 예쁘게 꾸며주는 부트스트랩기능-->
+                </div>
+
+                <button class="btn btn-primary">등록하기</button>
+
+            </form>
+
+            <div id="bottom" style="margin-top: 20px;"></div>
+        </div>
     </div>
 </body>
 <script type="module">
     const banner_type = {
-        team_interview : "interview",
-        team_info : "info",
-        guestboob : "guestbook",
-        favorite_food : "food"  
+        team_interview: "interview",
+        team_info: "info",
+        guestboob: "guestbook",
+        favorite_food: "food"
     }
 
     let current_banner = banner_type.team_interview;
@@ -448,6 +449,7 @@
     })
 
     let modal = document.getElementById('info_modal')
-    
+
 </script>
+
 </html>
